@@ -1,8 +1,16 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
-      PATH = "prepend", -- Ensures Mason uses your shell's PATH first
+      PATH = "prepend",
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        gopls = {},
+      },
     },
   },
 }

@@ -1,22 +1,13 @@
 return {
   {
     "stevearc/aerial.nvim",
-    opts = function(_, opts)
-      -- 1. Ensure Variable is included in the filter.
-      -- This allows "const someFunction = () => {}" to be picked up.
-      if opts.filter_kind then
-        table.insert(opts.filter_kind, "Variable")
-      else
-        opts.filter_kind = { "Class", "Function", "Method", "Variable" }
-      end
+    branch = "nvim-0.11",
+    opts = {
+      -- treesitter shows immediately; aerial upgrades to lsp once vue_ls finishes initializing
+      backends = { "lsp", "treesitter", "markdown", "man" },
 
-      opts.backends = { "lsp", "treesitter", "markdown", "man" }
-
-      -- 3. Optional: Customize the appearance
-      opts.layout = {
-        min_width = 40,
-        default_direction = "right",
-      }
-    end,
+      manage_folds = false,
+      filter_kind = false,
+    },
   },
 }
