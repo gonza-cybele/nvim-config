@@ -36,9 +36,9 @@ vim.g.clipboard = {
 -- Enable break indent
 vim.o.breakindent = true
 -- Add a "padding" of 1 space to wrapped lines
-vim.opt.breakindentopt = "sbr"
+-- vim.opt.breakindentopt = "sbr"
 -- Optional: Add a character at the start of the wrapped line
-vim.opt.showbreak = "↳ "
-vim.opt.wrapmargin = 2 -- Wraps 2 characters before the right edge
+vim.opt.showbreak = "↳"
+-- vim.opt.wrapmargin = 2 -- Wraps 2 characters before the right edge
 -- Enable line wrapping (LazyVim disables it by default)
 vim.opt.wrap = true

@@ -6,6 +6,7 @@ return {
         "vue",
         "css",
         "scss",
+        "ini",
       },
     },
   },

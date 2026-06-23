@@ -6,3 +6,11 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with lazyvim_ for the defaults)
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- Disable autoformat-on-save for HTTP request files (kulala), keep everything else
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "http", "rest" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
