@@ -42,3 +42,7 @@ vim.g.clipboard = {
 -- vim.opt.wrapmargin = 2 -- Wraps 2 characters before the right edge
 -- Enable line wrapping (LazyVim disables it by default)
 vim.opt.wrap = true
+
+-- Do not add a missing newline at the end of the file on write.
+-- Keeps legacy files byte-for-byte identical when saved without edits.
+vim.opt.fixendofline = false
