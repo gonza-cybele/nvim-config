@@ -1,5 +1,6 @@
 return {
   "stevearc/oil.nvim",
+  lazy = false, -- Force loading on startup
   opts = {
     view_options = {
       show_hidden = true,
